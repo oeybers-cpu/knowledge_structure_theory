@@ -555,12 +555,10 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); } 
         }
-        
         @keyframes lines-move {
             0% { transform: translateY(0); }
             100% { transform: translateY(100vh); }
         }
-
         @keyframes zoom-in-stars {
             from {
                 transform: translate(-50%, -50%) scale(0);
@@ -940,9 +938,9 @@
     <div class="top-header">
         <h1>Horizontal and Vertical Knowledge</h1>
     </div>
-    <!-- Back button -->
-    <a href="#" class="back-button-tab" id="backButton">
-        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back
+    <!-- Home button (replaces Back button) -->
+    <a href="https://oeybers-cpu.github.io/a_lit_models/" class="back-button-tab" id="homeButton">
+        <i class="fas fa-home" aria-hidden="true"></i> Home
     </a>
     <!-- Contact button -->
     <a href="#" class="contact-button-tab" id="contactButton">
@@ -1228,6 +1226,9 @@
             </div>
             <div class="copyright">
                 <p>© 2025 Dr Oscar Eybers</p>
+                <a href="https://oeybers-cpu.github.io/a_lit_models/" style="display: inline-block; margin-left: 15px; color: var(--digital-purple); text-decoration: none;">
+                    <i class="fas fa-home" aria-hidden="true"></i> Home
+                </a>
                 <a href="#" id="topLink" style="display: inline-block; margin-top: 8px; color: var(--digital-purple); text-decoration: none;">
                     <i class="fas fa-arrow-up" aria-hidden="true"></i> Back to Top
                 </a>
@@ -1256,18 +1257,6 @@
                     dropdown.classList.remove('active');
                 });
             });
-            // Back button functionality
-            const backButton = document.getElementById('backButton');
-            if (backButton) {
-                backButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    if (history.length > 1) {
-                        history.back();
-                    } else {
-                        window.location.href = '/';
-                    }
-                });
-            }
             // Top link functionality
             const topLink = document.getElementById('topLink');
             if (topLink) {
@@ -1279,18 +1268,6 @@
                     });
                 });
             }
-            // Store scroll position when navigating away
-            window.addEventListener('beforeunload', function() {
-                sessionStorage.setItem('scrollPosition', window.scrollY);
-            });
-            // Restore scroll position when returning to page
-            window.addEventListener('load', function() {
-                const scrollPosition = sessionStorage.getItem('scrollPosition');
-                if (scrollPosition) {
-                    window.scrollTo(0, parseInt(scrollPosition));
-                    sessionStorage.removeItem('scrollPosition');
-                }
-            });
         });
     </script>
 </body>
