@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic literacy is multimodal</title>
-    <meta name="description" content="Discover how academic literacy shapes identity, power, and meaning-making—featuring frameworks, real-world applications, and decolonial insights.">
-    <meta name="keywords" content="Multimodal decolonised academic literacy, ubuntu philosophy in education, educational theory and literacy, multiliteracies, multimodal communication, decolonisation, ubunty philosophy, educational theory, linguistics, language and identity">
-    <meta name="author" content="Dr Oscar Eybers">
+    <title>Horizontal and Vertical Knowledge</title>
+    <meta name="description" content="Understanding Basil Bernstein's theory of horizontal and vertical knowledge structures in African educational contexts">
+    <meta name="keywords" content="horizontal knowledge, vertical knowledge, Basil Bernstein, academic literacy, African education, knowledge structures">
+    <meta name="author" content="Academic Literacy Research">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&amp;family=Exo+2:wght@300;400;600&amp;display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -30,13 +30,11 @@
             --aqua-blue: #00FFFF;
             --card-padding: 20px;
             --card-gap: 25px;
-            /* Sun variables */
             --sun-color: #FFC107;
             --sun-glow: #FFA000;
             --sun-ray-color: #FFD700;
-            /* Header heights for scroll margin */
-            --top-header-height: 70px; /* Approximate height on larger screens */
-            --top-header-height-sm: 90px; /* Approximate height on small screens */
+            --top-header-height: 70px;
+            --top-header-height-sm: 90px;
         }
         body {
             background: linear-gradient(135deg, var(--darker), var(--dark));
@@ -75,7 +73,6 @@
             pointer-events: none;
             z-index: -1;
         }
-        /* New top header with title - Fixed for mobile */
         .top-header {
             position: fixed;
             top: 0;
@@ -84,135 +81,131 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 20px; /* Reduced padding */
+            padding: 10px 20px;
             background: rgba(10, 10, 20, 0.8);
             border-bottom: 1px solid rgba(207, 64, 255, 0.3);
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
         .top-header h1 {
-            font-size: 1.5rem; /* Reduced font size */
+            font-size: 1.5rem;
             background: linear-gradient(90deg, var(--primary), var(--digital-purple));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-transform: uppercase;
-            letter-spacing: 1px; /* Reduced letter spacing */
+            letter-spacing: 1px;
             text-shadow: 0 0 6px rgba(207, 64, 255, 0.6);
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             animation: pulseText 3s infinite alternate;
             text-align: center;
             margin: 0 auto;
-            max-width: 80%; /* Increased max-width */
+            max-width: 80%;
         }
         @keyframes pulseText {
             0% { text-shadow: 0 0 6px rgba(207, 64, 255, 0.6); }
             100% { text-shadow: 0 0 12px rgba(207, 64, 255, 0.8), 0 0 18px rgba(207, 64, 255, 0.6); }
         }
-       /* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-.dropdown-toggle {
-    color: var(--digital-purple);
-    text-decoration: none;
-    padding: 10px 12px; /* Reduced padding */
-    border-radius: 8px;
-    background: rgba(65, 105, 225, 0.1);
-    border: 1px solid var(--royal-blue);
-    transition: all 0.3s ease;
-    font-size: 0.8rem; /* Reduced font size */
-    text-align: center;
-    font-weight: 500;
-    text-shadow: 0 0 5px rgba(207, 64, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; /* Indicate it's clickable */
-    width: 100%;
-    box-sizing: border-box; /* Include padding/border in width */
-}
-.dropdown-toggle:hover,
-.dropdown.active .dropdown-toggle {
-    background: rgba(65, 105, 225, 0.3);
-    box-shadow: 0 0 12px rgba(65, 105, 225, 0.6);
-    transform: translateY(-2px);
-    color: var(--light);
-    border-color: var(--royal-blue-light);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-.dropdown-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%; /* Position below the toggle */
-    left: 0;
-    width: 100%;
-    background: rgba(10, 10, 20, 0.95); /* Slightly darker background */
-    border: 1px solid var(--royal-blue);
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1001; /* Ensure it's above other content */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    backdrop-filter: blur(5px); /* Slight blur for glass effect */
-}
-.dropdown-menu li {
-    width: 100%;
-}
-.dropdown-menu a {
-    color: var(--light);
-    text-decoration: none;
-    padding: 8px 12px; /* Reduced padding */
-    display: block;
-    transition: background-color 0.2s ease;
-    font-size: 0.75rem; /* Reduced font size */
-    border-bottom: 1px solid rgba(207, 64, 255, 0.1);
-}
-.dropdown-menu a:hover {
-    background-color: rgba(65, 105, 225, 0.2);
-    color: var(--light);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-/* Remove border-bottom from the last item */
-.dropdown-menu li:last-child a {
-    border-bottom: none;
-}
-/* Show dropdown menu when active */
-.dropdown.active .dropdown-menu {
-    display: block;
-}
-/* Rotate icon when active */
-.dropdown.active .dropdown-icon {
-    transform: rotate(180deg);
-}
-.dropdown-icon {
-    margin-left: 6px; /* Reduced margin */
-    transition: transform 0.3s ease;
-    font-size: 0.8rem; /* Reduced icon size */
-}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .dropdown-toggle {
+            color: var(--digital-purple);
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: rgba(65, 105, 225, 0.1);
+            border: 1px solid var(--royal-blue);
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            text-align: center;
+            font-weight: 500;
+            text-shadow: 0 0 5px rgba(207, 64, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .dropdown-toggle:hover,
+        .dropdown.active .dropdown-toggle {
+            background: rgba(65, 105, 225, 0.3);
+            box-shadow: 0 0 12px rgba(65, 105, 225, 0.6);
+            transform: translateY(-2px);
+            color: var(--light);
+            border-color: var(--royal-blue-light);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 20, 0.95);
+            border: 1px solid var(--royal-blue);
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            backdrop-filter: blur(5px);
+        }
+        .dropdown-menu li {
+            width: 100%;
+        }
+        .dropdown-menu a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+            transition: background-color 0.2s ease;
+            font-size: 0.75rem;
+            border-bottom: 1px solid rgba(207, 64, 255, 0.1);
+        }
+        .dropdown-menu a:hover {
+            background-color: rgba(65, 105, 225, 0.2);
+            color: var(--light);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+        .dropdown.active .dropdown-icon {
+            transform: rotate(180deg);
+        }
+        .dropdown-icon {
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
         .back-button-tab {
             position: fixed;
-            top: 15px; /* Reduced top position */
-            left: 15px; /* Reduced left position */
+            top: 15px;
+            left: 15px;
             z-index: 1001;
             background: rgba(20, 20, 30, 0.7);
             border: 1px solid var(--royal-blue);
             color: var(--royal-blue);
-            padding: 8px 15px; /* Reduced padding */
+            padding: 8px 15px;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 8px; /* Reduced gap */
+            gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             box-shadow: 0 0 12px rgba(65, 105, 225, 0.3);
             text-decoration: none;
-            font-size: 0.8rem; /* Reduced font size */
+            font-size: 0.8rem;
             font-weight: 600;
         }
         .back-button-tab:hover {
@@ -222,26 +215,25 @@
             color: var(--light);
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
         }
-        /* NEW: Contact button styling */
         .contact-button-tab {
             position: fixed;
-            top: 15px; /* Reduced top position */
-            right: 15px; /* Reduced right position */
+            top: 15px;
+            right: 15px;
             z-index: 1001;
             background: rgba(20, 20, 30, 0.7);
             border: 1px solid var(--royal-blue);
             color: var(--royal-blue);
-            padding: 8px 15px; /* Reduced padding */
+            padding: 8px 15px;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 8px; /* Reduced gap */
+            gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             box-shadow: 0 0 12px rgba(65, 105, 225, 0.3);
             text-decoration: none;
-            font-size: 0.8rem; /* Reduced font size */
+            font-size: 0.8rem;
             font-weight: 600;
         }
         .contact-button-tab:hover {
@@ -251,31 +243,28 @@
             color: var(--light);
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
         }
-        /* Main container */
         .main-container {
             width: 100%;
             max-width: 1400px;
-            margin: 70px auto 0; /* Reduced margin for smaller header */
+            margin: 70px auto 0;
         }
-        /* Top navigation links */
         .top-nav {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
-            gap: 12px; /* Reduced gap */
-            margin-bottom: 30px; /* Reduced margin */
-            padding: 0 15px; /* Reduced padding */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+            padding: 0 15px;
         }
-        /* Header with Sun Integration - Significantly reduced height */
         header {
             text-align: center;
-            padding: 10px 0; /* Reduced padding */
+            padding: 10px 0;
             position: relative;
             background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
             border-bottom: 1px solid rgba(207, 64, 255, 0.3);
-            margin-bottom: 20px; /* Reduced margin */
+            margin-bottom: 20px;
             border-radius: 0 0 10px 10px;
             overflow: hidden;
-            min-height: 180px; /* Significantly reduced height */
+            min-height: 180px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -301,24 +290,23 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
-        /* Sun container - Moved behind and reduced size */
         .sun-container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 0; /* Behind other content */
-            width: 200px; /* Reduced size */
-            height: 200px; /* Reduced size */
+            z-index: 0;
+            width: 200px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
             pointer-events: none;
-            opacity: 0.7; /* Slightly transparent */
+            opacity: 0.7;
         }
         .sun-core {
-            width: 80px; /* Reduced size */
-            height: 80px; /* Reduced size */
+            width: 80px;
+            height: 80px;
             background: var(--sun-color);
             border-radius: 50%;
             position: relative;
@@ -331,18 +319,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px; /* Reduced size */
-            height: 200px; /* Reduced size */
+            width: 200px;
+            height: 200px;
             z-index: 1;
             background: repeating-conic-gradient(from 0deg, var(--sun-ray-color) 0deg 3deg, transparent 3deg 20deg);
             border-radius: 50%;
-            opacity: 0.6; /* Reduced opacity */
+            opacity: 0.6;
             animation: ray-rotate 20s infinite linear, ray-pulse 4s infinite ease-in-out;
             box-shadow: 0 0 15px 4px var(--sun-ray-color);
         }
         @keyframes sun-pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.03); } /* Reduced pulse */
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
         @keyframes ray-rotate {
@@ -350,11 +338,10 @@
             100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
         @keyframes ray-pulse {
-            0% { opacity: 0.6; } /* Adjusted for reduced opacity */
+            0% { opacity: 0.6; }
             50% { opacity: 0.8; }
             100% { opacity: 0.6; }
         }
-        /* Header content */
         .header-content {
             position: relative;
             z-index: 2;
@@ -366,9 +353,9 @@
             background: var(--card-bg);
             border: 1px solid rgba(207, 64, 255, 0.2);
             border-radius: 11.25px;
-            padding: 15px; /* Reduced padding */
+            padding: 15px;
             max-width: 600px;
-            margin: 15px auto; /* Reduced margin */
+            margin: 15px auto;
             backdrop-filter: blur(10px);
             box-shadow: 0 0 15px rgba(207, 64, 255, 0.15);
             transition: all 0.4s ease;
@@ -390,7 +377,7 @@
             z-index: 1;
         }
         .contact-card:hover {
-            transform: translateY(-3px); /* Reduced hover effect */
+            transform: translateY(-3px);
             box-shadow: 0 5px 20px rgba(207, 64, 255, 0.3);
         }
         .contact-card:hover::before {
@@ -398,27 +385,25 @@
         }
         .contact-card h2 {
             color: var(--digital-purple);
-            margin-bottom: 10px; /* Reduced margin */
-            font-size: 1.1rem; /* Reduced font size */
+            margin-bottom: 10px;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px; /* Reduced gap */
+            gap: 8px;
             font-family: 'Orbitron', sans-serif;
         }
         .contact-card p {
             color: #ddd;
-            font-size: 0.9rem; /* Reduced font size */
-            line-height: 1.5; /* Reduced line height */
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
-        /* Card Styles - Updated to BEM convention */
         .articles-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: var(--card-gap);
-            margin: 25px 0; /* Reduced margin */
+            margin: 25px 0;
         }
-        /* Base card styling */
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(207, 64, 255, 0.2);
@@ -431,7 +416,7 @@
             position: relative;
             overflow: hidden;
             height: 100%;
-            min-height: 500px; /* Reduced height */
+            min-height: 500px;
         }
         .card::before {
             content: '';
@@ -447,25 +432,23 @@
             z-index: 1;
         }
         .card:hover {
-            transform: translateY(-3px); /* Reduced hover effect */
+            transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(207, 64, 255, 0.3);
         }
         .card:hover::before {
             transform: scaleX(1);
         }
-        /* Card Header */
         .card__header {
-            padding-bottom: 8px; /* Reduced padding */
+            padding-bottom: 8px;
         }
         .card__title {
             color: var(--digital-purple);
-            font-size: 1.2rem; /* Reduced font size */
-            margin-bottom: 12px; /* Reduced margin */
+            font-size: 1.2rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px; /* Reduced gap */
+            gap: 8px;
         }
-        /* Card Body */
         .card__body {
             flex-grow: 1;
             display: flex;
@@ -474,271 +457,16 @@
         }
         .card__image {
             width: 100%;
-            height: 200px; /* Reduced height */
+            height: 200px;
             object-fit: cover;
             object-position: center 30%;
             border-radius: 8px;
-            margin-bottom: 12px; /* Reduced margin */
+            margin-bottom: 12px;
             border: 2px solid rgba(207, 64, 255, 0.3);
             transition: transform 0.3s ease;
         }
         .card:hover .card__image {
-            transform: scale(1.02); /* Reduced scale */
-        }
-        .card__quote {
-            background: rgba(207, 64, 255, 0.15);
-            color: var(--primary);
-            padding: 10px; /* Reduced padding */
-            border-radius: 8px;
-            font-size: 0.85rem; /* Reduced font size */
-            border: 1px solid rgba(207, 64, 255, 0.3);
-            margin: 12px 0; /* Reduced margin */
-            position: relative;
-            padding-left: 35px; /* Reduced padding */
-        }
-        .card__quote i {
-            position: absolute;
-            left: 10px; /* Reduced left position */
-            top: 10px; /* Reduced top position */
-            color: var(--primary);
-            font-size: 0.9rem; /* Reduced icon size */
-        }
-        /* Card Meta */
-        .card__meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px; /* Reduced gap */
-            margin: 8px 0; /* Reduced margin */
-        }
-        .tag {
-            background: rgba(207, 64, 255, 0.15);
-            color: var(--primary);
-            padding: 4px 8px; /* Reduced padding */
-            border-radius: 15px;
-            font-size: 0.7rem; /* Reduced font size */
-            border: 1px solid rgba(207, 64, 255, 0.3);
-        }
-        /* Card Footer */
-        .card__footer {
-            background: rgba(207, 64, 255, 0.08);
-            border-top: 1px solid rgba(207, 64, 255, 0.2);
-            padding: 10px 12px; /* Reduced padding */
-            border-radius: 0 0 8px 8px;
-            font-size: 0.8rem; /* Reduced font size */
-            color: var(--lighter-accent);
-            margin-top: 12px; /* Reduced margin */
-        }
-        /* Content sections */
-        .content-section {
-            margin-bottom: 30px; /* Reduced margin */
-            /* Default scroll margin for larger screens */
-            scroll-margin-top: calc(var(--top-header-height) + 10px);
-        }
-        .section-title {
-            color: var(--digital-purple);
-            font-size: 1.4rem; /* Reduced font size */
-            margin-bottom: 20px; /* Reduced margin */
-            padding-bottom: 8px; /* Reduced padding */
-            border-bottom: 1px solid rgba(207, 64, 255, 0.3);
-            font-family: 'Orbitron', sans-serif;
-            text-align: center;
-        }
-        .copyright {
-            text-align: center;
-            padding: 25px 0; /* Reduced padding */
-            color: #777;
-            font-size: 0.85rem; /* Reduced font size */
-            border-top: 1px solid rgba(207, 64, 255, 0.2);
-            margin-top: 30px; /* Reduced margin */
-        }
-        .centered-card {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: center;
-        }
-        .centered-card > .card {
-            max-width: 700px;
-            width: 100%;
-        }
-        /* Visitor Counter Styles */
-        #freeCounter {
-            text-align: center;
-            padding: 15px 0; /* Reduced padding */
-            margin: 15px auto; /* Reduced margin */
-            max-width: 600px;
-            background: rgba(20, 20, 30, 0.7);
-            border: 1px solid rgba(207, 64, 255, 0.2);
-            border-radius: 8px;
-            box-shadow: 0 0 12px rgba(207, 64, 255, 0.15);
-        }
-        #freeCounter a {
-            color: var(--digital-purple);
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-size: 0.85rem; /* Reduced font size */
-        }
-        #freeCounter a:hover {
-            color: var(--light);
-            text-shadow: 0 0 8px rgba(207, 64, 255, 0.8);
-        }
-        /* Responsive Design Improvements */
-        @media (max-width: 1200px) {
-            .top-nav {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        @media (max-width: 1100px) {
-            .articles-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        @media (max-width: 900px) {
-            .top-nav {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .top-header h1 {
-                font-size: 1.3rem; /* Reduced font size */
-            }
-            header {
-                min-height: 160px; /* Reduced height */
-            }
-            .sun-container {
-                width: 180px; /* Reduced size */
-                height: 180px; /* Reduced size */
-            }
-            .sun-core {
-                width: 70px; /* Reduced size */
-                height: 70px; /* Reduced size */
-            }
-            .sun-rays {
-                width: 180px; /* Reduced size */
-                height: 180px; /* Reduced size */
-            }
-        }
-        @media (max-width: 768px) {
-            .top-nav {
-                gap: 10px; /* Reduced gap */
-            }
-            /* Adjusted dropdown toggle for smaller screens */
-            .dropdown-toggle {
-                padding: 8px 10px; /* Reduced padding */
-                font-size: 0.75rem; /* Reduced font size */
-            }
-            .card__image {
-                 height: 160px; /* Reduced height */
-            }
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 12px; /* Reduced padding */
-            }
-            /* FIXED: Increased top value to prevent collision with header */
-            .back-button-tab {
-                top: 55px; /* Adjusted top position */
-                left: 12px; /* Reduced left position */
-                padding: 6px 12px; /* Reduced padding */
-                font-size: 0.7rem; /* Reduced font size */
-                z-index: 1002;
-            }
-            /* FIXED: Increased top value to prevent collision with header */
-            .contact-button-tab {
-                top: 55px; /* Adjusted top position */
-                right: 12px; /* Reduced right position */
-                padding: 6px 12px; /* Reduced padding */
-                font-size: 0.7rem; /* Reduced font size */
-                z-index: 1002;
-            }
-            /* Adjust sun for mobile */
-            .sun-container {
-                width: 150px; /* Reduced size */
-                height: 150px; /* Reduced size */
-            }
-            .sun-core {
-                width: 60px; /* Reduced size */
-                height: 60px; /* Reduced size */
-                box-shadow: 0 0 15px 6px var(--sun-glow);
-            }
-            .sun-rays {
-                width: 150px; /* Reduced size */
-                height: 150px; /* Reduced size */
-                box-shadow: 0 0 12px 3px var(--sun-ray-color);
-            }
-            header {
-                min-height: 140px; /* Reduced height */
-            }
-            .top-header {
-                padding: 10px 8px; /* Reduced padding */
-                flex-direction: column;
-                height: auto;
-            }
-            .top-header h1 {
-                font-size: 1.1rem; /* Reduced font size */
-                max-width: 100%;
-                /* Removed padding and margin-top for simpler, more predictable layout */
-            }
-            .top-nav {
-                grid-template-columns: 1fr; /* Stack dropdowns on mobile */
-                gap: 8px; /* Reduced gap */
-                padding: 0 8px; /* Reduced padding */
-            }
-             /* Adjusted dropdown toggle for very small screens */
-            .dropdown-toggle {
-                padding: 10px 8px; /* Reduced padding */
-                font-size: 0.8rem; /* Reduced font size */
-            }
-            .contact-card {
-                padding: 12px; /* Reduced padding */
-                margin: 12px auto; /* Reduced margin */
-            }
-            .contact-card h2 {
-                font-size: 1rem; /* Reduced font size */
-            }
-            .section-title {
-                font-size: 1.2rem; /* Reduced font size */
-            }
-            .card__title {
-                font-size: 1rem; /* Reduced font size */
-            }
-            /* Adjust main container margin for fixed header height on small screens */
-            .main-container {
-                margin: calc(var(--top-header-height-sm) + 15px) auto 0; /* Adjusted margin */
-            }
-            /* Adjust scroll margin for fixed header height on small screens */
-            .content-section {
-                scroll-margin-top: calc(var(--top-header-height-sm) + 10px); /* Adjusted scroll margin */
-            }
-            #freeCounter {
-                padding: 12px; /* Reduced padding */
-                font-size: 0.8rem; /* Reduced font size */
-            }
-            .card {
-                min-height: 450px; /* Reduced height */
-            }
-            .card__image {
-                height: 140px; /* Reduced height */
-            }
-        }
-        @media (max-width: 480px) {
-            .top-header h1 {
-                font-size: 1rem; /* Further reduced font size */
-            }
-            .back-button-tab, .contact-button-tab {
-                padding: 5px 10px; /* Reduced padding */
-                font-size: 0.65rem; /* Reduced font size */
-            }
-            .card {
-                min-height: 400px; /* Further reduced height */
-            }
-            .card__image {
-                height: 120px; /* Reduced height */
-            }
-            .card__title {
-                font-size: 0.95rem; /* Reduced font size */
-            }
-            .contact-card h2 {
-                font-size: 0.9rem; /* Reduced font size */
-            }
+            transform: scale(1.02);
         }
         
         /* New image container styles for transition challenges */
@@ -757,67 +485,303 @@
                 flex-direction: column;
             }
         }
+        
+        .card__quote {
+            background: rgba(207, 64, 255, 0.15);
+            color: var(--primary);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(207, 64, 255, 0.3);
+            margin: 12px 0;
+            position: relative;
+            padding-left: 35px;
+        }
+        .card__quote i {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        .card__meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 8px 0;
+        }
+        .tag {
+            background: rgba(207, 64, 255, 0.15);
+            color: var(--primary);
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            border: 1px solid rgba(207, 64, 255, 0.3);
+        }
+        .card__footer {
+            background: rgba(207, 64, 255, 0.08);
+            border-top: 1px solid rgba(207, 64, 255, 0.2);
+            padding: 10px 12px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.8rem;
+            color: var(--lighter-accent);
+            margin-top: 12px;
+        }
+        .content-section {
+            margin-bottom: 30px;
+            scroll-margin-top: calc(var(--top-header-height) + 10px);
+        }
+        .section-title {
+            color: var(--digital-purple);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(207, 64, 255, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+        .copyright {
+            text-align: center;
+            padding: 25px 0;
+            color: #777;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(207, 64, 255, 0.2);
+            margin-top: 30px;
+        }
+        .centered-card {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+        }
+        .centered-card > .card {
+            max-width: 700px;
+            width: 100%;
+        }
+        .knowledge-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .horizontal-knowledge, .vertical-knowledge {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(207, 64, 255, 0.2);
+        }
+        .horizontal-knowledge {
+            border-top: 4px solid #e74c3c;
+        }
+        .vertical-knowledge {
+            border-top: 4px solid #3498db;
+        }
+        .knowledge-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .knowledge-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .horizontal-icon {
+            color: #e74c3c;
+        }
+        .vertical-icon {
+            color: #3498db;
+        }
+        @media (max-width: 1100px) {
+            .articles-container {
+                grid-template-columns: 1fr;
+            }
+            .knowledge-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 900px) {
+            .top-nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .top-header h1 {
+                font-size: 1.3rem;
+            }
+            header {
+                min-height: 160px;
+            }
+            .sun-container {
+                width: 180px;
+                height: 180px;
+            }
+            .sun-core {
+                width: 70px;
+                height: 70px;
+            }
+            .sun-rays {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        @media (max-width: 768px) {
+            .top-nav {
+                gap: 10px;
+            }
+            .dropdown-toggle {
+                padding: 8px 10px;
+                font-size: 0.75rem;
+            }
+            .card__image {
+                 height: 160px;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .back-button-tab, .contact-button-tab {
+                top: 55px;
+                padding: 6px 12px;
+                font-size: 0.7rem;
+            }
+            .back-button-tab {
+                left: 12px;
+            }
+            .contact-button-tab {
+                right: 12px;
+            }
+            .sun-container {
+                width: 150px;
+                height: 150px;
+            }
+            .sun-core {
+                width: 60px;
+                height: 60px;
+                box-shadow: 0 0 15px 6px var(--sun-glow);
+            }
+            .sun-rays {
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 0 12px 3px var(--sun-ray-color);
+            }
+            header {
+                min-height: 140px;
+            }
+            .top-header {
+                padding: 10px 8px;
+                flex-direction: column;
+                height: auto;
+            }
+            .top-header h1 {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+            .top-nav {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 0 8px;
+            }
+            .dropdown-toggle {
+                padding: 10px 8px;
+                font-size: 0.8rem;
+            }
+            .contact-card {
+                padding: 12px;
+                margin: 12px auto;
+            }
+            .contact-card h2 {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+            .card__title {
+                font-size: 1rem;
+            }
+            .main-container {
+                margin: calc(var(--top-header-height-sm) + 15px) auto 0;
+            }
+            .content-section {
+                scroll-margin-top: calc(var(--top-header-height-sm) + 10px);
+            }
+            .card {
+                min-height: 450px;
+            }
+            .card__image {
+                height: 140px;
+            }
+        }
+        @media (max-width: 480px) {
+            .top-header h1 {
+                font-size: 1rem;
+            }
+            .back-button-tab, .contact-button-tab {
+                padding: 5px 10px;
+                font-size: 0.65rem;
+            }
+            .card {
+                min-height: 400px;
+            }
+            .card__image {
+                height: 120px;
+            }
+            .card__title {
+                font-size: 0.95rem;
+            }
+            .contact-card h2 {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="grid-lines"></div>
-    <!-- New top header with title -->
+    <!-- Top header with title -->
     <div class="top-header">
-        <h1>Academic Literacy Hub</h1>
+        <h1>Horizontal and Vertical Knowledge</h1>
     </div>
+    <!-- Back button -->
     <a href="#" class="back-button-tab" id="backButton">
         <i class="fas fa-arrow-left" aria-hidden="true"></i> Back
     </a>
-    <!-- NEW: Contact button in top right -->
-    <a href="https://oeybers-cpu.github.io/contact/" class="contact-button-tab" id="contactButton">
+    <!-- Contact button -->
+    <a href="#" class="contact-button-tab" id="contactButton">
         <i class="fas fa-envelope" aria-hidden="true"></i> Contact
     </a>
     <div class="main-container">
-       <!-- Top Navigation Links -->
-<div class="top-nav">
-    <!-- Dropdown 1: Foundational Models & Theories -->
-    <div class="dropdown">
-        <div class="dropdown-toggle">
-            Foundational Models & Theories <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-        <ul class="dropdown-menu">
-            <li><a href="https://www.researchgate.net/publication/47343136_The_Academic_Literacies_Model_Theorey_and_Applications" target="_blank">Theory and applications (Lea & Street's model)</a></li>
-            <li><a href="https://oeybers-cpu.github.io/sociocultural/" target="_blank">Sociocultural academic literacy</a></li>
-            <!-- New Discourse and literacy link added here -->
-            <li><a href="https://oeybers-cpu.github.io/discourse_intro/" target="_blank">Discourse and literacy</a></li>
-            <!-- <li><a href="https://acadlit-sz3ss6.manus.space/" target="_blank">Multilingual academic literacy</a></li> --> <!-- REMOVED -->
-            <li><a href="https://oeybers-cpu.github.io/autonomous_model/" target="_blank">Autonomous literacy model</a></li>
-            <li><a href="https://oeybers-cpu.github.io/multimodal_grammar/" target="_blank">Multimodal academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/disciplinary_semiotics/" target="_blank">Literacy and disciplinary semiotics</a></li>
-        </ul>
-    </div>
-    <!-- Dropdown 2: Indigenous & Cultural Perspectives -->
-    <div class="dropdown">
-        <div class="dropdown-toggle">
-            Indigenous & Cultural Perspectives <i class="fas fa-chevron-down dropdown-icon"></i>
-        </div>
-        <ul class="dropdown-menu">
-            <li><a href="https://oeybers-cpu.github.io/ubuntu/" target="_blank">Ubuntu and academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/pre_colonial/" target="_blank">Pre-colonial academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/Imhotep/" target="_blank">Imhotep and academic literacy</a></li>
-            <li><a href="https://www.researchgate.net/publication/388081527_An_Inclusive_African_Theory_of_Academic_Literacy?_sg%5B0%5D=EiaCcsbFh-Gasaxs08kAMgbpw60A8RjJwcbnA6HgjUHCVECVxF9kFgDcdkYHthDXWxYHAokIuEFyJIRLlJL35LtAyLAM-NGHAhkxc_0j.Sg0hBb14hVdyhUBRJCcvw2KmyxTJTyNrhJ3CyRBDF4lqF2eKx_Bbbe5jDojSwmf4n5e8CyQJFN1W6UhoZFkG3w&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19" target="_blank">African theory of academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/Achebe/" target="_blank">Achebe and academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/ngugi/" target="_blank">Wa Thiong'o and academic literacy</a></li>
-            <li><a href="https://oeybers-cpu.github.io/ancient_writers/" target="_blank">Ancient African Writing</a></li>
-            <li><a href="https://oeybers-cpu.github.io/visual_semiotics/" target="_blank">African art semiotics</a></li>
-        </ul>
-    </div>
-   <!-- Dropdown 3: Applications & Interdisciplinary Connections -->
-<div class="dropdown">
-    <div class="dropdown-toggle">
-        Applications & Interdisciplinary Connections <i class="fas fa-chevron-down dropdown-icon"></i>
-    </div>
-    <ul class="dropdown-menu">
-        <li><a href="https://oeybers-cpu.github.io/AL_econ/" target="_blank">Academic literacy and economic empowerment</a></li>
-        <li><a href="https://oeybers-cpu.github.io/knowledge_structures/" target="_blank">Bernstein's Knowledge Structures</a></li>
-    </ul>
-</div>
-</div>
+        <!-- Top Navigation Links -->
+        <div class="top-nav">
+            <!-- Dropdown 1: Foundational Concepts -->
+            <div class="dropdown">
+                <div class="dropdown-toggle">
+                    Foundational Concepts <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bernstein's Theory</a></li>
+                    <li><a href="#">Knowledge Structures</a></li>
+                    <li><a href="#">Academic Literacy</a></li>
+                </ul>
+            </div>
+            <!-- Dropdown 2: African Contexts -->
+            <div class="dropdown">
+                <div class="dropdown-toggle">
+                    African Contexts <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Educational Challenges</a></li>
+                    <li><a href="#">Indigenous Knowledge</a></li>
+                    <li><a href="#">Cultural Perspectives</a></li>
+                </ul>
+            </div>
+            <!-- Dropdown 3: Applications -->
+            <div class="dropdown">
+                <div class="dropdown-toggle">
+                    Applications <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Teaching Strategies</a></li>
+                    <li><a href="#">Curriculum Design</a></li>
+                    <li><a href="#">Literacy Development</a></li>
+                </ul>
+            </div>
         </div>
         <div class="container">
             <header>
@@ -827,73 +791,101 @@
                     <div class="sun-rays"></div>
                 </div>
                 <div class="header-content">
-                    <!-- Removed the subtitle text -->
                     <div class="contact-card">
-                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Key Finding</h2>
-                        <p>"Academic literacies foreground meaning-making, identity, power, and authority in academic writing, moving beyond skills and socialisation models."</p>
+                        <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Key Insight</h2>
+                        <p>"The challenge for African students lies in transitioning from horizontal knowledge systems to the vertical knowledge structures dominant in higher education."</p>
                     </div>
                 </div>
             </header>
+            <!-- Introduction Section -->
             <div class="content-section">
-                <h2 class="section-title">Theoretical Frameworks</h2>
+                <h2 class="section-title">Understanding Knowledge Structures</h2>
                 <div class="articles-container">
-                    <!-- Card 1: Three Models -->
+                    <!-- Card 1: Introduction -->
                     <div class="card">
                         <div class="card__header">
                             <h2 class="card__title">
-                                <i class="fas fa-chart-bar" aria-hidden="true"></i> Foundations of Academic Literacy
+                                <i class="fas fa-brain" aria-hidden="true"></i> Introduction
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/1756310906.png?raw=true"
-                                 alt="Three models of academic literacy showing different approaches to understanding literacy practices"
-                                 class="card__image">
-                            <p>Academic literacy can be understood through three distinct theoretical approaches. The skills-based perspective views literacy as transferable technical abilities applicable across contexts. The socialisation approach sees literacy as contextual, requiring adaptation to specific academic communities. The literacies perspective recognises literacy as socially situated and contested, involving negotiation of meaning, identity, and power within academic contexts.</p>
-                            <p>Each model offers different assumptions about how knowledge is constructed and transmitted within educational settings. Contemporary research increasingly acknowledges the complex social dimensions of academic communication, highlighting how literacy practices are embedded within broader cultural and institutional frameworks rather than being merely transferable skills.</p>
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1000" alt="Academic knowledge representation" class="card__image">
+                            <p>The relationship between horizontal and vertical knowledge structures as theorized by Basil Bernstein is essential for understanding academic literacy development, especially in African educational contexts.</p>
+                            <p>This framework helps us understand the challenges African students face when transitioning from their home and community knowledge systems to the academic knowledge demanded by higher education institutions.</p>
                             <blockquote class="card__quote">
-                                <i class="fas fa-quote-left" aria-hidden="true"></i> Academic writing is never merely about skills or socialisation; it always involves questions of power, identity, and access to knowledge communities.
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Academic literacy developers play a critical mediating role in bridging the gap between horizontal and vertical knowledge structures.
                             </blockquote>
                             <div class="card__meta">
                                 <span class="tag">Theory</span>
-                                <span class="tag">Epistemology</span>
-                                <span class="tag">Pedagogy</span>
+                                <span class="tag">Education</span>
+                                <span class="tag">Literacy</span>
                             </div>
                         </div>
                         <footer class="card__footer">
-                            Understanding the foundational perspectives on academic literacy
+                            Foundation of Bernstein's knowledge structure theory
                         </footer>
                     </div>
-                    <!-- Card 2: Academic Literacies Model -->
+                    <!-- Card 2: Knowledge Structures -->
                     <div class="card">
                         <div class="card__header">
                             <h2 class="card__title">
-                                <i class="fas fa-book-open" aria-hidden="true"></i> Literacy as Social Practice
+                                <i class="fas fa-sitemap" aria-hidden="true"></i> Knowledge Structures
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://github.com/oeybers-cpu/acadlit_apartheid/blob/main/new%20al%202.png?raw=true"
-                                 alt="Academic literacies model showing social practice framework"
-                                 class="card__image">
-                            <p>Academic literacies treats reading and writing as social practices that vary with context, culture, and genre. This perspective views student writing and learning as issues of epistemology and identity rather than merely skill acquisition or socialisation. Knowledge is constructed through participation in disciplinary communities where meaning-making involves negotiation of power relations and cultural norms.</p>
-                            <p>Students navigate multiple literacy practices across different academic settings, each with distinct expectations regarding structure, voice, evidence, and argumentation. These practices reflect deeper epistemological assumptions about what counts as valid knowledge within particular disciplines. The recognition that academic literacy is inherently situated within specific communities challenges simplistic approaches to academic writing instruction.</p>
-                            <blockquote class="card__quote">
-                                <i class="fas fa-quote-left" aria-hidden="true"></i> Academic literacy practices are diverse, contested, and situated within specific social contexts that shape how knowledge is constructed and communicated.
-                            </blockquote>
+                            <div class="knowledge-comparison">
+                                <!-- Horizontal Knowledge -->
+                                <div class="horizontal-knowledge">
+                                    <div class="knowledge-header">
+                                        <i class="fas fa-arrows-alt-h knowledge-icon horizontal-icon"></i>
+                                        <h3>Horizontal Knowledge</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Segmented, context-specific knowledge domains</li>
+                                        <li>Local knowledge often learned informally</li>
+                                        <li>Rooted in specific social or cultural experiences</li>
+                                        <li>Discontinuous with no overarching integrating principle</li>
+                                        <li>Tend to be oral, culturally embedded, and contextually based</li>
+                                        <li>Example: Sociology, indigenous knowledge systems</li>
+                                    </ul>
+                                </div>
+                                <!-- Vertical Knowledge -->
+                                <div class="vertical-knowledge">
+                                    <div class="knowledge-header">
+                                        <i class="fas fa-arrows-alt-v knowledge-icon vertical-icon"></i>
+                                        <h3>Vertical Knowledge</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Coherent, systematically principled knowledge</li>
+                                        <li>Integrated bodies of knowledge that build cumulatively</li>
+                                        <li>Organized through generalized rules and methodologies</li>
+                                        <li>Specialized and symbolic (e.g., physical sciences)</li>
+                                        <li>Hierarchical organization with explicit validation rules</li>
+                                        <li>Facilitates progression and conceptual understanding</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="card__meta">
-                                <span class="tag">Social Practice</span>
-                                <span class="tag">Epistemology</span>
-                                <span class="tag">Identity</span>
+                                <span class="tag">Comparison</span>
+                                <span class="tag">Structures</span>
+                                <span class="tag">Analysis</span>
                             </div>
                         </div>
                         <footer class="card__footer">
-                            How writing functions as a social practice within academic communities
+                            Contrasting characteristics of knowledge structures
                         </footer>
                     </div>
-                    <!-- Card 3: Genre and Mode Switching -->
+                </div>
+            </div>
+            <!-- Educational Implications Section -->
+            <div class="content-section">
+                <h2 class="section-title">Educational Implications</h2>
+                <div class="articles-container">
+                    <!-- Card 3: Transition Challenges -->
                     <div class="card">
                         <div class="card__header">
                             <h2 class="card__title">
-                                <i class="fas fa-exchange-alt" aria-hidden="true"></i> Genre and Mode Transitions
+                                <i class="fas fa-exchange-alt" aria-hidden="true"></i> Transition Challenges
                             </h2>
                         </div>
                         <div class="card__body">
@@ -905,45 +897,97 @@
                                      alt="Vertical academic transition challenge diagram showing mode integration"
                                      class="card__image">
                             </div>
-                            <p>Students constantly navigate between different genres and modes of communication as they move through academic settings. Genres represent types of text—both spoken and written—such as discussions, notes, essays, and presentations. Each genre carries specific expectations regarding structure, language, and purpose.</p>
-                            <p>These transitions involve shifts in mode—from internal thought to external speech, from spoken discussion to written notes, from linguistic to visual communication. Each shift requires students to attend to different aspects of communication, including language structure, visual layout, and multimodal elements that contribute to meaning-making. This complex navigation highlights why a narrow focus on technical skills cannot adequately prepare students for the diverse literacy demands they encounter.</p>
+                            <p>The challenge for African students lies in transitioning from horizontal knowledge systems (their home and community knowledge) to the vertical knowledge structures dominant in higher education institutions.</p>
+                            <p>This transition entails mastering academic literacy practices—reading, writing, reasoning, and argumentation styles specific to disciplines—which are often unfamiliar and alienating.</p>
                             <blockquote class="card__quote">
-                                <i class="fas fa-quote-left" aria-hidden="true"></i> Students must develop awareness of the different qualities associated with various genres and modes as they move between communication contexts in academic work.
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Students must navigate between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge.
                             </blockquote>
                             <div class="card__meta">
-                                <span class="tag">Genre</span>
-                                <span class="tag">Mode</span>
-                                <span class="tag">Transformation</span>
+                                <span class="tag">Challenges</span>
+                                <span class="tag">Transition</span>
+                                <span class="tag">Adaptation</span>
                             </div>
                         </div>
                         <footer class="card__footer">
-                            Understanding transitions between communication contexts in academic work
+                            Understanding the transition between knowledge systems
                         </footer>
                     </div>
-                    <!-- Card 4: Multimodal Communication -->
+                    <!-- Card 4: Developer Roles -->
                     <div class="card">
                         <div class="card__header">
                             <h2 class="card__title">
-                                <i class="fas fa-project-diagram" aria-hidden="true"></i> Multimodal Meaning-Making
+                                <i class="fas fa-hands-helping" aria-hidden="true"></i> Developer Roles
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://github.com/oeybers-cpu/multimodal_grammar/blob/main/digital_communication_africa.png?raw=true"
-                                 alt="Multimodal communication showing integration of different semiotic resources"
-                                 class="card__image">
-                            <p>Communication extends far beyond linguistic elements. Multimodality recognises that meaning is constructed through multiple channels working together. In academic contexts, this includes visual elements (images, layout, typography), aural components (tone, pace, silence), gestural communication (body language, hand movements), and spatial arrangements (proximity, architecture).</p>
-                            <p>Each mode offers unique resources for meaning-making, and academic communication typically involves the strategic integration of multiple modes. Understanding these multimodal practices is essential for effective participation in academic discourse communities. Approaches that focus solely on linguistic elements fail to acknowledge the rich complexity of contemporary academic communication across diverse contexts and media.</p>
-                            <blockquote class="card__quote">
-                                <i class="fas fa-quote-left" aria-hidden="true"></i> Meaning is constructed through the integration of multiple semiotic resources, each contributing uniquely to the overall message in academic communication.
-                            </blockquote>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000" alt="Academic support illustration" class="card__image">
+                            <p>Academic literacy developers play a critical mediating role in bridging this gap. They facilitate students' navigation between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge demanded by universities.</p>
+                            <p>This involves making explicit the genres, conventions, and epistemological underpinnings of vertical knowledge structures while validating and incorporating students' cultural and linguistic backgrounds.</p>
                             <div class="card__meta">
-                                <span class="tag">Multimodality</span>
-                                <span class="tag">Semiotics</span>
-                                <span class="tag">Communication</span>
+                                <span class="tag">Mediation</span>
+                                <span class="tag">Support</span>
+                                <span class="tag">Integration</span>
                             </div>
                         </div>
                         <footer class="card__footer">
-                            How multiple communication modes work together in academic contexts
+                            The crucial role of academic literacy developers
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <!-- Strategies Section -->
+            <div class="content-section">
+                <h2 class="section-title">Effective Strategies</h2>
+                <div class="articles-container">
+                    <!-- Card 5: African-Centered Approach -->
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 class="card__title">
+                                <i class="fas fa-globe-africa" aria-hidden="true"></i> African-Centered Approach
+                            </h2>
+                        </div>
+                        <div class="card__body">
+                            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1000" alt="African education illustration" class="card__image">
+                            <p>In African contexts, academic literacy development is most effective when it moves beyond neutral, standardized literacy models and adopts an African-centered, inclusive approach that integrates African languages, ways of knowing, and cultural epistemologies.</p>
+                            <p>This approach values students' identities, their situated knowledge, and the need to develop mastery in disciplinary genres. It can reduce high attrition rates and empower students to succeed academically while retaining their cultural intelligences and agency.</p>
+                            <blockquote class="card__quote">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Effective approaches integrate African languages, ways of knowing, and cultural epistemologies.
+                            </blockquote>
+                            <div class="card__meta">
+                                <span class="tag">Inclusion</span>
+                                <span class="tag">Culture</span>
+                                <span class="tag">Empowerment</span>
+                            </div>
+                        </div>
+                        <footer class="card__footer">
+                            The importance of African-centered approaches to literacy
+                        </footer>
+                    </div>
+                    <!-- Card 6: Implementation Strategies -->
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 class="card__title">
+                                <i class="fas fa-tasks" aria-hidden="true"></i> Implementation Strategies
+                            </h2>
+                        </div>
+                        <div class="card__body">
+                            <img src="https://images.unsplash.com/photo-1522881193457-37ae97c905bf?auto=format&fit=crop&q=80&w=1000" alt="Education strategies illustration" class="card__image">
+                            <p>Academic literacy developers can implement various strategies to support African students:</p>
+                            <ul>
+                                <li>Contextualize academic literacy by linking disciplinary literacies with students' cultural knowledge</li>
+                                <li>Design inclusive curricula that recognize multiple epistemologies and languages</li>
+                                <li>Scaffold students' acquisition of academic genres and literacy practices</li>
+                                <li>Create opportunities for dialogue that validate African knowledge systems</li>
+                                <li>Promote critical literacies and transdisciplinary approaches</li>
+                            </ul>
+                            <div class="card__meta">
+                                <span class="tag">Strategies</span>
+                                <span class="tag">Implementation</span>
+                                <span class="tag">Practice</span>
+                            </div>
+                        </div>
+                        <footer class="card__footer">
+                            Practical strategies for supporting students
                         </footer>
                     </div>
                 </div>
@@ -953,138 +997,94 @@
                 <div class="card">
                     <div class="card__header">
                         <h2 class="card__title">
-                            <i class="fas fa-globe-africa" aria-hidden="true"></i> Academic Literacy in Global Contexts
+                            <i class="fas fa-handshake" aria-hidden="true"></i> Bridging Knowledge Systems
                         </h2>
                     </div>
                     <div class="card__body">
-                        <img src="https://github.com/oeybers-cpu/Ubuntu_2/blob/main/ubuntu.png?raw=true"
-                             alt="Interconnected academic communities representing global knowledge exchange"
-                             class="card__image">
-                        <p>Academic literacy practices exist within diverse cultural and linguistic contexts. Different knowledge traditions offer valuable perspectives on meaning-making, argumentation, and knowledge construction. Understanding these variations enriches academic communication by expanding the range of acceptable forms and challenging monolingual or monocultural assumptions.</p>
-                        <p>Global academic communication benefits from recognising multiple ways of knowing and communicating. This includes valuing different narrative structures, argumentation styles, and approaches to evidence. Such recognition supports more inclusive academic communities where diverse voices can contribute meaningfully to knowledge production. Approaches that position academic literacy as a fixed set of skills often overlook the rich diversity of knowledge traditions that can enhance academic discourse.</p>
-                        <!-- Embedded new image here, centered and 25% smaller -->
-                        <div style="text-align: center; margin: 12px 0;"> <!-- Reduced margin -->
-                            <img src="https://i0.wp.com/media.premiumtimesng.com/wp-content/files/2022/12/Intercultural-dialogue.jpg?w=1024&ssl=1"
-                                 alt="Intercultural dialogue illustration"
-                                 style="width: 75%; max-width: 100%; height: auto; border-radius: 8px; border: 1px solid rgba(207, 64, 255, 0.3);">
-                        </div>
-                        <!-- End of new image -->
+                        <img src="https://images.unsplash.com/photo-1532094349884-5439476f5a3f?auto=format&fit=crop&q=80&w=1000" alt="Knowledge integration illustration" class="card__image">
+                        <p>Understanding Bernstein's distinction helps academic literacy developers appreciate the epistemological and cultural challenges African students face. To support success, developers must act as cultural and epistemic brokers who translate and negotiate between the horizontal knowledge students embody and the vertical knowledge demanded by academic institutions.</p>
+                        <p>This involves designing inclusive, culturally responsive literacy practices that empower students to navigate and integrate these different knowledge structures effectively. By recognizing the value of both knowledge systems, we can create more equitable educational environments that honor diverse ways of knowing while preparing students for academic success.</p>
                         <blockquote class="card__quote">
-                            <i class="fas fa-quote-left" aria-hidden="true"></i> Academic literacy is enriched when we recognise and value diverse knowledge traditions and communication practices across cultural contexts.
+                            <i class="fas fa-quote-left" aria-hidden="true"></i> Developers must act as cultural and epistemic brokers who translate between knowledge systems.
                         </blockquote>
                         <div class="card__meta">
-                            <span class="tag">Global Contexts</span>
-                            <span class="tag">Diversity</span>
-                            <span class="tag">Inclusion</span>
+                            <span class="tag">Integration</span>
+                            <span class="tag">Brokerage</span>
+                            <span class="tag">Transformation</span>
                         </div>
                     </div>
                     <footer class="card__footer">
-                        Understanding academic literacy within diverse global contexts
+                        The importance of bridging knowledge systems for student success
                     </footer>
                 </div>
             </div>
-            <!-- Embedded Visitor Counter -->
-            <div id="freeCounter">
-                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=98eaca31612f4331b0b8acd08eb43e530eb44597'></script>
-                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1386787/t/5"></script>
-                <br>
-                <a href='https://www.free-counters.org/'>... by Free-Counters.org</a>
-            </div>
-            <!-- End of Visitor Counter -->
             <div class="copyright">
-                <p>&copy; 2025 Dr Oscar Eybers</p>
-                <a href="#" id="topLink" style="display: inline-block; margin-top: 8px; color: var(--digital-purple); text-decoration: none;"> <!-- Reduced margin -->
-                    <i class="fas fa-arrow-up" aria-hidden="true"></i> Top
+                <p>© 2023 Academic Literacy Research</p>
+                <a href="#" id="topLink" style="display: inline-block; margin-top: 8px; color: var(--digital-purple); text-decoration: none;">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i> Back to Top
                 </a>
             </div>
         </div>
-        <script>
-            // Ensure DOM is fully loaded before attaching event handlers
-            document.addEventListener('DOMContentLoaded', function() {
-                // Dropdown functionality
-                const dropdowns = document.querySelectorAll('.dropdown');
-                dropdowns.forEach(dropdown => {
-                    const toggle = dropdown.querySelector('.dropdown-toggle');
-                    toggle.addEventListener('click', function(e) {
-                        e.stopPropagation(); // Prevent event bubbling
-                        // Close other dropdowns
-                        dropdowns.forEach(d => {
-                            if (d !== dropdown) {
-                                d.classList.remove('active');
-                            }
-                        });
-                        // Toggle current dropdown
-                        dropdown.classList.toggle('active');
-                    });
-                });
-                // Close dropdowns when clicking outside
-                document.addEventListener('click', function() {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                });
-                // Back button functionality - IMPROVED
-                const backButton = document.getElementById('backButton');
-                if (backButton) {
-                    backButton.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        // Store current state with scroll position before navigating
-                        const currentState = {
-                            url: window.location.href,
-                            scrollY: window.scrollY
-                        };
-                        history.replaceState(currentState, document.title);
-                        // Go back in history
-                        if (history.length > 1) {
-                            history.back();
-                        } else {
-                            // Fallback if no history
-                            window.location.href = '/';
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dropdown functionality
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove('active');
                         }
                     });
-                }
-                // Top link functionality
-                const topLink = document.getElementById('topLink');
-                if (topLink) {
-                    topLink.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    });
-                }
-                // Store scroll position when navigating away
-                window.addEventListener('beforeunload', function() {
-                    const currentState = {
-                        url: window.location.href,
-                        scrollY: window.scrollY
-                    };
-                    history.replaceState(currentState, document.title);
-                });
-                // Restore scroll position when returning to page
-                window.addEventListener('pageshow', function(event) {
-                    if (event.persisted) {
-                        const state = history.state;
-                        if (state && state.scrollY !== undefined) {
-                            window.scrollTo(0, state.scrollY);
-                        }
-                    }
-                });
-                // Handle direct navigation to this page
-                if (performance.navigation.type === PerformanceNavigation.TYPE_BACK_FORWARD) {
-                    const state = history.state;
-                    if (state && state.scrollY !== undefined) {
-                        window.scrollTo(0, state.scrollY);
-                    }
-                }
-                // Handle orientation changes
-                window.addEventListener('orientationchange', function() {
-                    setTimeout(function() {
-                        window.location.reload();
-                    }, 300);
+                    dropdown.classList.toggle('active');
                 });
             });
-        </script>
-    </body>
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function() {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+            // Back button functionality
+            const backButton = document.getElementById('backButton');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (history.length > 1) {
+                        history.back();
+                    } else {
+                        window.location.href = '/';
+                    }
+                });
+            }
+            // Top link functionality
+            const topLink = document.getElementById('topLink');
+            if (topLink) {
+                topLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            // Store scroll position when navigating away
+            window.addEventListener('beforeunload', function() {
+                sessionStorage.setItem('scrollPosition', window.scrollY);
+            });
+            // Restore scroll position when returning to page
+            window.addEventListener('load', function() {
+                const scrollPosition = sessionStorage.getItem('scrollPosition');
+                if (scrollPosition) {
+                    window.scrollTo(0, parseInt(scrollPosition));
+                    sessionStorage.removeItem('scrollPosition');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
+w display correctly as a responsive container with a gap between them, and they stack vertically on mobile screens for better viewing experience.
