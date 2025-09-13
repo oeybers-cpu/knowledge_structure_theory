@@ -455,6 +455,122 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        .horizon-card {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top, #4a007f, #000);
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .horizon-card .stars {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            z-index: 0;
+            box-shadow: 
+                -100vw -50vh #fff, -95vw -20vh #fff, -90vw 10vh #fff, -85vw -30vh #fff, -80vw 40vh #fff,
+                -75vw 0vh #fff, -70vw -40vh #fff, -65vw 20vh #fff, -60vw -10vh #fff, -55vw 35vh #fff,
+                -50vw 5vh #fff, -45vw -25vh #fff, -40vw 15vh #fff, -35vw -45vh #fff, -30vw 25vh #fff,
+                -25vw -5vh #fff, -20vw 30vh #fff, -15vw -15vh #fff, -10vw 40vh #fff, -5vw -30vh #fff,
+                0vw 0vh #fff, 5vw -40vh #fff, 10vw 20vh #fff, 15vw -25vh #fff, 20vw 30vh #fff,
+                25vw -15vh #fff, 30vw 5vh #fff, 35vw -35vh #fff, 40vw 10vh #fff, 45vw -50vh #fff,
+                50vw 20vh #fff, 55vw -5vh #fff, 60vw 40vh #fff, 65vw -25vh #fff, 70vw 15vh #fff,
+                75vw -10vh #fff, 80vw 30vh #fff, 85vw -20vh #fff, 90vw 10vh #fff, 95vw -50vh #fff;
+            animation: zoom-in-stars 10s linear infinite;
+        }
+        .horizon-card .stars::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: 
+                -95vw 20vh #fff, -80vw -15vh #fff, -70vw 30vh #fff, -60vw -25vh #fff, -50vw 15vh #fff,
+                -40vw 5vh #fff, -30vw -30vh #fff, -20vw 10vh #fff, -10vw -45vh #fff, 0vw 25vh #fff,
+                10vw -5vh #fff, 20vw 35vh #fff, 30vw -20vh #fff, 40vw 10vh #fff, 50vw -30vh #fff,
+                60vw 15vh #fff, 70vw -10vh #fff, 80vw 30vh #fff, 90vw -40vh #fff, 95vw 5vh #fff;
+            animation: zoom-in-stars 15s linear infinite reverse;
+        }
+        .horizon-card .sun-orb {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to bottom, #ff8c00, #ff4500);
+            border-radius: 50%;
+            bottom: -30px;
+            animation: sun-rise 15s ease-in-out infinite alternate, sun-glow 3s infinite;
+            z-index: 2;
+        }
+        .horizon-card .landscape-track {
+            position: absolute;
+            bottom: 0;
+            width: 200%; 
+            height: 25%; 
+            display: flex;
+            animation: landscape-move 20s linear infinite;
+            z-index: 1;
+        }
+        .horizon-card .landscape {
+            flex-shrink: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to top, #ff6347, #ff8c00, #ffd700);
+            clip-path: polygon(0 80%, 10% 40%, 20% 70%, 30% 30%, 40% 60%, 50% 20%, 60% 50%, 70% 10%, 80% 40%, 90% 80%, 100% 50%, 100% 100%, 0 100%);
+        }
+        .horizon-card .digital-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.1) 1px,
+                transparent 1px,
+                transparent 20px
+            );
+            animation: lines-move 10s linear infinite;
+            z-index: 3;
+        }
+        @keyframes sun-rise {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30vh); }
+        }
+        @keyframes sun-glow {
+            0% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.7); }
+            50% { box-shadow: 0 0 40px rgba(255, 69, 0, 0.9); }
+            100% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.7); }
+        }
+        @keyframes landscape-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
+        }
+        
+        @keyframes lines-move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+
+        @keyframes zoom-in-stars {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
         .card__image {
             width: 100%;
             height: 200px;
@@ -572,7 +688,6 @@
         .vertical-icon {
             color: #3498db;
         }
-        
         /* CSS Knowledge Banner Styles */
         .knowledge-banner-container {
             position: relative;
@@ -656,7 +771,6 @@
             0% { transform: scale(1) rotate(0deg); }
             100% { transform: scale(1.05) rotate(360deg); }
         }
-
         @media (max-width: 1100px) {
             .articles-container {
                 grid-template-columns: 1fr;
@@ -822,22 +936,18 @@
 </head>
 <body>
     <div class="grid-lines"></div>
-    
     <!-- Top header with title -->
     <div class="top-header">
         <h1>Horizontal and Vertical Knowledge</h1>
     </div>
-    
     <!-- Back button -->
     <a href="#" class="back-button-tab" id="backButton">
         <i class="fas fa-arrow-left" aria-hidden="true"></i> Back
     </a>
-    
     <!-- Contact button -->
     <a href="#" class="contact-button-tab" id="contactButton">
         <i class="fas fa-envelope" aria-hidden="true"></i> Contact
     </a>
-    
     <div class="main-container">
         <!-- Top Navigation Links -->
         <div class="top-nav">
@@ -852,7 +962,6 @@
                     <li><a href="#">Academic Literacy</a></li>
                 </ul>
             </div>
-            
             <!-- Dropdown 2: African Contexts -->
             <div class="dropdown">
                 <div class="dropdown-toggle">
@@ -864,7 +973,6 @@
                     <li><a href="#">Cultural Perspectives</a></li>
                 </ul>
             </div>
-            
             <!-- Dropdown 3: Applications -->
             <div class="dropdown">
                 <div class="dropdown-toggle">
@@ -877,7 +985,6 @@
                 </ul>
             </div>
         </div>
-        
         <div class="container">
             <header>
                 <!-- Digital Sun -->
@@ -885,7 +992,6 @@
                     <div class="sun-core"></div>
                     <div class="sun-rays"></div>
                 </div>
-                
                 <div class="header-content">
                     <div class="contact-card">
                         <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Key Insight</h2>
@@ -893,7 +999,6 @@
                     </div>
                 </div>
             </header>
-            
             <!-- Introduction Section -->
             <div class="content-section">
                 <h2 class="section-title">Understanding Knowledge Structures</h2>
@@ -911,7 +1016,6 @@
                                 <span class="knowledge-banner-text">KNOWLEDGE</span>
                                 <div class="knowledge-banner-border-accent"></div>
                             </div>
-                            
                             <p>The relationship between horizontal and vertical knowledge structures as theorized by Basil Bernstein is essential for understanding academic literacy development, especially in African educational contexts.</p>
                             <p>This framework helps us understand the challenges African students face when transitioning from their home and community knowledge systems to the academic knowledge demanded by higher education institutions.</p>
                             <blockquote class="card__quote">
@@ -927,7 +1031,6 @@
                             Foundation of Bernstein's knowledge structure theory
                         </footer>
                     </div>
-                    
                     <!-- Card 2: Knowledge Structures -->
                     <div class="card">
                         <div class="card__header">
@@ -952,7 +1055,6 @@
                                         <li>Example: Sociology, indigenous knowledge systems</li>
                                     </ul>
                                 </div>
-                                
                                 <!-- Vertical Knowledge -->
                                 <div class="vertical-knowledge">
                                     <div class="knowledge-header">
@@ -981,7 +1083,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- Educational Implications Section -->
             <div class="content-section">
                 <h2 class="section-title">Educational Implications</h2>
@@ -1010,7 +1111,6 @@
                             Understanding the transition between knowledge systems
                         </footer>
                     </div>
-                    
                     <!-- Card 4: Developer Roles -->
                     <div class="card">
                         <div class="card__header">
@@ -1034,7 +1134,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- Strategies Section -->
             <div class="content-section">
                 <h2 class="section-title">Effective Strategies</h2>
@@ -1047,7 +1146,16 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1000" alt="African education illustration" class="card__image">
+                            <!-- Embedded Digital African Horizon -->
+                            <div class="horizon-card">
+                                <div class="stars"></div>
+                                <div class="sun-orb"></div>
+                                <div class="landscape-track">
+                                    <div class="landscape"></div>
+                                    <div class="landscape"></div>
+                                </div>
+                                <div class="digital-lines"></div>
+                            </div>
                             <p>In African contexts, academic literacy development is most effective when it moves beyond neutral, standardized literacy models and adopts an African-centered, inclusive approach that integrates African languages, ways of knowing, and cultural epistemologies.</p>
                             <p>This approach values students' identities, their situated knowledge, and the need to develop mastery in disciplinary genres. It can reduce high attrition rates and empower students to succeed academically while retaining their cultural intelligences and agency.</p>
                             <blockquote class="card__quote">
@@ -1063,7 +1171,6 @@
                             The importance of African-centered approaches to literacy
                         </footer>
                     </div>
-                    
                     <!-- Card 6: Implementation Strategies -->
                     <div class="card">
                         <div class="card__header">
@@ -1093,7 +1200,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- Centered final card -->
             <div class="centered-card">
                 <div class="card">
@@ -1120,7 +1226,6 @@
                     </footer>
                 </div>
             </div>
-            
             <div class="copyright">
                 <p>© 2023 Academic Literacy Research</p>
                 <a href="#" id="topLink" style="display: inline-block; margin-top: 8px; color: var(--digital-purple); text-decoration: none;">
@@ -1129,7 +1234,6 @@
             </div>
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dropdown functionality
@@ -1146,14 +1250,12 @@
                     dropdown.classList.toggle('active');
                 });
             });
-            
             // Close dropdowns when clicking outside
             document.addEventListener('click', function() {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });
             });
-            
             // Back button functionality
             const backButton = document.getElementById('backButton');
             if (backButton) {
@@ -1166,7 +1268,6 @@
                     }
                 });
             }
-            
             // Top link functionality
             const topLink = document.getElementById('topLink');
             if (topLink) {
@@ -1178,12 +1279,10 @@
                     });
                 });
             }
-            
             // Store scroll position when navigating away
             window.addEventListener('beforeunload', function() {
                 sessionStorage.setItem('scrollPosition', window.scrollY);
             });
-            
             // Restore scroll position when returning to page
             window.addEventListener('load', function() {
                 const scrollPosition = sessionStorage.getItem('scrollPosition');
@@ -1196,3 +1295,5 @@
     </script>
 </body>
 </html>
+
+This creates a visually striking representation of an African horizon while maintaining all the original content and functionality of the card.
