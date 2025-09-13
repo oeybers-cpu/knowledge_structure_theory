@@ -339,8 +339,8 @@
         }
         @keyframes ray-pulse {
             0% { opacity: 0.6; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.6; }
+           50% { opacity: 0.8; }
+           100% { opacity: 0.6; }
         }
         .header-content {
             position: relative;
@@ -468,22 +468,6 @@
         .card:hover .card__image {
             transform: scale(1.02);
         }
-        /* New image container styles for transition challenges */
-        .image-container {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .image-container .card__image {
-            flex: 1;
-            min-width: 0;
-            height: auto;
-        }
-        @media (max-width: 768px) {
-            .image-container {
-                flex-direction: column;
-            }
-        }
         .card__quote {
             background: rgba(207, 64, 255, 0.15);
             color: var(--primary);
@@ -588,6 +572,91 @@
         .vertical-icon {
             color: #3498db;
         }
+        
+        /* CSS Knowledge Banner Styles */
+        .knowledge-banner-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 12px;
+        }
+        .knowledge-banner-container:hover {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+        }
+        .knowledge-banner-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(255, 0, 0, 0.2),
+                    rgba(255, 0, 0, 0.2) 10px,
+                    rgba(255, 255, 0, 0.2) 10px,
+                    rgba(255, 255, 0, 0.2) 20px,
+                    rgba(0, 255, 0, 0.2) 20px,
+                    rgba(0, 255, 0, 0.2) 30px
+                );
+            background-size: 60px 60px;
+            animation: color-cycle 10s linear infinite, digital-glow 2s linear infinite;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        .knowledge-banner-container:hover::before {
+            animation: color-cycle 10s linear infinite, digital-glow 0.5s linear infinite;
+        }
+        .knowledge-banner-text {
+            position: relative;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            z-index: 2;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .knowledge-banner-border-accent {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid;
+            border-image: linear-gradient(
+                45deg,
+                #ff0000,
+                #ffd700,
+                #00ff00,
+                #ffd700,
+                #ff0000
+            ) 1;
+            z-index: 0;
+            animation: border-cycle 5s linear infinite;
+        }
+        @keyframes color-cycle {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+        @keyframes digital-glow {
+            0% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+            100% { filter: brightness(1); }
+        }
+        @keyframes border-cycle {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.05) rotate(360deg); }
+        }
+
         @media (max-width: 1100px) {
             .articles-container {
                 grid-template-columns: 1fr;
@@ -618,6 +687,9 @@
                 width: 180px;
                 height: 180px;
             }
+            .knowledge-banner-text {
+                font-size: 2em;
+            }
         }
         @media (max-width: 768px) {
             .top-nav {
@@ -629,6 +701,12 @@
             }
             .card__image {
                  height: 160px;
+            }
+            .knowledge-banner-container {
+                height: 120px;
+            }
+            .knowledge-banner-text {
+                font-size: 1.8em;
             }
         }
         @media (max-width: 600px) {
@@ -706,6 +784,12 @@
             .card__image {
                 height: 140px;
             }
+            .knowledge-banner-container {
+                height: 100px;
+            }
+            .knowledge-banner-text {
+                font-size: 1.5em;
+            }
         }
         @media (max-width: 480px) {
             .top-header h1 {
@@ -727,23 +811,33 @@
             .contact-card h2 {
                 font-size: 0.9rem;
             }
+            .knowledge-banner-container {
+                height: 80px;
+            }
+            .knowledge-banner-text {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="grid-lines"></div>
+    
     <!-- Top header with title -->
     <div class="top-header">
         <h1>Horizontal and Vertical Knowledge</h1>
     </div>
+    
     <!-- Back button -->
     <a href="#" class="back-button-tab" id="backButton">
         <i class="fas fa-arrow-left" aria-hidden="true"></i> Back
     </a>
+    
     <!-- Contact button -->
     <a href="#" class="contact-button-tab" id="contactButton">
         <i class="fas fa-envelope" aria-hidden="true"></i> Contact
     </a>
+    
     <div class="main-container">
         <!-- Top Navigation Links -->
         <div class="top-nav">
@@ -758,6 +852,7 @@
                     <li><a href="#">Academic Literacy</a></li>
                 </ul>
             </div>
+            
             <!-- Dropdown 2: African Contexts -->
             <div class="dropdown">
                 <div class="dropdown-toggle">
@@ -769,6 +864,7 @@
                     <li><a href="#">Cultural Perspectives</a></li>
                 </ul>
             </div>
+            
             <!-- Dropdown 3: Applications -->
             <div class="dropdown">
                 <div class="dropdown-toggle">
@@ -781,6 +877,7 @@
                 </ul>
             </div>
         </div>
+        
         <div class="container">
             <header>
                 <!-- Digital Sun -->
@@ -788,6 +885,7 @@
                     <div class="sun-core"></div>
                     <div class="sun-rays"></div>
                 </div>
+                
                 <div class="header-content">
                     <div class="contact-card">
                         <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Key Insight</h2>
@@ -795,6 +893,7 @@
                     </div>
                 </div>
             </header>
+            
             <!-- Introduction Section -->
             <div class="content-section">
                 <h2 class="section-title">Understanding Knowledge Structures</h2>
@@ -807,7 +906,12 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1000" alt="Academic knowledge representation" class="card__image">
+                            <!-- CSS Knowledge Banner (replacing the image) -->
+                            <div class="knowledge-banner-container">
+                                <span class="knowledge-banner-text">KNOWLEDGE</span>
+                                <div class="knowledge-banner-border-accent"></div>
+                            </div>
+                            
                             <p>The relationship between horizontal and vertical knowledge structures as theorized by Basil Bernstein is essential for understanding academic literacy development, especially in African educational contexts.</p>
                             <p>This framework helps us understand the challenges African students face when transitioning from their home and community knowledge systems to the academic knowledge demanded by higher education institutions.</p>
                             <blockquote class="card__quote">
@@ -823,6 +927,7 @@
                             Foundation of Bernstein's knowledge structure theory
                         </footer>
                     </div>
+                    
                     <!-- Card 2: Knowledge Structures -->
                     <div class="card">
                         <div class="card__header">
@@ -847,6 +952,7 @@
                                         <li>Example: Sociology, indigenous knowledge systems</li>
                                     </ul>
                                 </div>
+                                
                                 <!-- Vertical Knowledge -->
                                 <div class="vertical-knowledge">
                                     <div class="knowledge-header">
@@ -875,6 +981,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Educational Implications Section -->
             <div class="content-section">
                 <h2 class="section-title">Educational Implications</h2>
@@ -887,10 +994,7 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <!-- Only keep the vertical image, removed horizontal image and image-container -->
-                            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/vertical%20k.png?raw=true" 
-                                 alt="Vertical academic transition challenge diagram showing mode integration"
-                                 class="card__image">
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=1000" alt="Educational transition illustration" class="card__image">
                             <p>The challenge for African students lies in transitioning from horizontal knowledge systems (their home and community knowledge) to the vertical knowledge structures dominant in higher education institutions.</p>
                             <p>This transition entails mastering academic literacy practices—reading, writing, reasoning, and argumentation styles specific to disciplines—which are often unfamiliar and alienating.</p>
                             <blockquote class="card__quote">
@@ -906,6 +1010,7 @@
                             Understanding the transition between knowledge systems
                         </footer>
                     </div>
+                    
                     <!-- Card 4: Developer Roles -->
                     <div class="card">
                         <div class="card__header">
@@ -914,10 +1019,7 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <!-- Moved horizontal image from Transition Challenges card to here -->
-                            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/horizontal%20k.png?raw=true" 
-                                 alt="Horizontal academic transition challenge diagram showing genre shifts"
-                                 class="card__image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000" alt="Academic support illustration" class="card__image">
                             <p>Academic literacy developers play a critical mediating role in bridging this gap. They facilitate students' navigation between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge demanded by universities.</p>
                             <p>This involves making explicit the genres, conventions, and epistemological underpinnings of vertical knowledge structures while validating and incorporating students' cultural and linguistic backgrounds.</p>
                             <div class="card__meta">
@@ -932,6 +1034,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Strategies Section -->
             <div class="content-section">
                 <h2 class="section-title">Effective Strategies</h2>
@@ -960,6 +1063,7 @@
                             The importance of African-centered approaches to literacy
                         </footer>
                     </div>
+                    
                     <!-- Card 6: Implementation Strategies -->
                     <div class="card">
                         <div class="card__header">
@@ -989,6 +1093,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Centered final card -->
             <div class="centered-card">
                 <div class="card">
@@ -1015,6 +1120,7 @@
                     </footer>
                 </div>
             </div>
+            
             <div class="copyright">
                 <p>© 2023 Academic Literacy Research</p>
                 <a href="#" id="topLink" style="display: inline-block; margin-top: 8px; color: var(--digital-purple); text-decoration: none;">
@@ -1023,6 +1129,7 @@
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dropdown functionality
@@ -1039,12 +1146,14 @@
                     dropdown.classList.toggle('active');
                 });
             });
+            
             // Close dropdowns when clicking outside
             document.addEventListener('click', function() {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });
             });
+            
             // Back button functionality
             const backButton = document.getElementById('backButton');
             if (backButton) {
@@ -1057,6 +1166,7 @@
                     }
                 });
             }
+            
             // Top link functionality
             const topLink = document.getElementById('topLink');
             if (topLink) {
@@ -1068,10 +1178,12 @@
                     });
                 });
             }
+            
             // Store scroll position when navigating away
             window.addEventListener('beforeunload', function() {
                 sessionStorage.setItem('scrollPosition', window.scrollY);
             });
+            
             // Restore scroll position when returning to page
             window.addEventListener('load', function() {
                 const scrollPosition = sessionStorage.getItem('scrollPosition');
