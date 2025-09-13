@@ -468,7 +468,6 @@
         .card:hover .card__image {
             transform: scale(1.02);
         }
-        
         /* New image container styles for transition challenges */
         .image-container {
             display: flex;
@@ -485,7 +484,6 @@
                 flex-direction: column;
             }
         }
-        
         .card__quote {
             background: rgba(207, 64, 255, 0.15);
             color: var(--primary);
@@ -889,14 +887,10 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <div class="image-container">
-                                <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/horizontal%20k.png?raw=true" 
-                                     alt="Horizontal academic transition challenge diagram showing genre shifts"
-                                     class="card__image">
-                                <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/vertical%20k.png?raw=true" 
-                                     alt="Vertical academic transition challenge diagram showing mode integration"
-                                     class="card__image">
-                            </div>
+                            <!-- Only keep the vertical image, removed horizontal image and image-container -->
+                            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/vertical%20k.png?raw=true" 
+                                 alt="Vertical academic transition challenge diagram showing mode integration"
+                                 class="card__image">
                             <p>The challenge for African students lies in transitioning from horizontal knowledge systems (their home and community knowledge) to the vertical knowledge structures dominant in higher education institutions.</p>
                             <p>This transition entails mastering academic literacy practices—reading, writing, reasoning, and argumentation styles specific to disciplines—which are often unfamiliar and alienating.</p>
                             <blockquote class="card__quote">
@@ -920,7 +914,10 @@
                             </h2>
                         </div>
                         <div class="card__body">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000" alt="Academic support illustration" class="card__image">
+                            <!-- Moved horizontal image from Transition Challenges card to here -->
+                            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/main/horizontal%20k.png?raw=true" 
+                                 alt="Horizontal academic transition challenge diagram showing genre shifts"
+                                 class="card__image">
                             <p>Academic literacy developers play a critical mediating role in bridging this gap. They facilitate students' navigation between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge demanded by universities.</p>
                             <p>This involves making explicit the genres, conventions, and epistemological underpinnings of vertical knowledge structures while validating and incorporating students' cultural and linguistic backgrounds.</p>
                             <div class="card__meta">
@@ -1087,4 +1084,3 @@
     </script>
 </body>
 </html>
-w display correctly as a responsive container with a gap between them, and they stack vertically on mobile screens for better viewing experience.
