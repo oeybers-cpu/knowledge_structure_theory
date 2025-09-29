@@ -415,8 +415,8 @@
             box-shadow: 0 5px 15px rgba(207, 64, 255, 0.1);
             position: relative;
             overflow: hidden;
-            height: 100%;
-            min-height: 500px;
+            height: auto;
+            min-height: 300px;
         }
         .card::before {
             content: '';
@@ -891,7 +891,7 @@
                 scroll-margin-top: calc(var(--top-header-height-sm) + 10px);
             }
             .card {
-                min-height: 450px;
+                min-height: 350px;
             }
             .card__image {
                 height: 140px;
@@ -912,7 +912,7 @@
                 font-size: 0.65rem;
             }
             .card {
-                min-height: 400px;
+                min-height: 300px;
             }
             .card__image {
                 height: 120px;
@@ -993,7 +993,7 @@
                 <div class="header-content">
                     <div class="contact-card">
                         <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Key Insight</h2>
-                        <p>"Through strategic academic literacy development, formerly marginalized African students in South Africa are transforming educational landscapes, proving that knowledge integration can drive social progress."</p>
+                        <p>"The challenge for African students lies in transitioning from horizontal knowledge systems to the vertical knowledge structures dominant in higher education."</p>
                     </div>
                 </div>
             </header>
@@ -1014,7 +1014,11 @@
                                 <span class="knowledge-banner-text">KNOWLEDGE</span>
                                 <div class="knowledge-banner-border-accent"></div>
                             </div>
-                            <p>Bernstein's theory of horizontal and vertical knowledge structures reveals how South Africa's educational transformation requires bridging community-based wisdom with academic rigor. This framework illuminates the journey of students navigating between cultural knowledge systems and institutional expectations, creating pathways for equitable academic success while honoring indigenous epistemologies.</p>
+                            <p>The relationship between horizontal and vertical knowledge structures as theorized by Basil Bernstein is essential for understanding academic literacy development, especially in African educational contexts.</p>
+                            <p>This framework helps us understand the challenges African students face when transitioning from their home and community knowledge systems to the academic knowledge demanded by higher education institutions.</p>
+                            <blockquote class="card__quote">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Academic literacy developers play a critical mediating role in bridging the gap between horizontal and vertical knowledge structures.
+                            </blockquote>
                             <div class="card__meta">
                                 <span class="tag">Theory</span>
                                 <span class="tag">Education</span>
@@ -1025,59 +1029,62 @@
                             Foundation of Bernstein's knowledge structure theory
                         </footer>
                     </div>
-                   <!-- Card 2: Knowledge Structures -->
-<div class="card">
-    <div class="card__header">
-        <h2 class="card__title">
-            <i class="fas fa-sitemap" aria-hidden="true"></i> Knowledge Structures
-        </h2>
-    </div>
-    <div class="card__body">
-        <img src="https://tse1.mm.bing.net/th/id/OIP.fReW_7jhWo4GD4pfmi0JswHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" 
-             alt="Knowledge Structures Comparison" 
-             class="card__image">
-        <div class="knowledge-comparison">
-            <!-- Horizontal Knowledge -->
-            <div class="horizontal-knowledge">
-                <div class="knowledge-header">
-                    <i class="fas fa-arrows-alt-h knowledge-icon horizontal-icon"></i>
-                    <h3>Horizontal Knowledge</h3>
+                    <!-- Card 2: Knowledge Structures -->
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 class="card__title">
+                                <i class="fas fa-sitemap" aria-hidden="true"></i> Knowledge Structures
+                            </h2>
+                        </div>
+                        <div class="card__body">
+                            <div class="knowledge-comparison">
+                                <!-- Horizontal Knowledge -->
+                                <div class="horizontal-knowledge">
+                                    <div class="knowledge-header">
+                                        <i class="fas fa-arrows-alt-h knowledge-icon horizontal-icon"></i>
+                                        <h3>Horizontal Knowledge</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Segmented, context-specific knowledge domains</li>
+                                        <li>Local knowledge often learned informally</li>
+                                        <li>Rooted in specific social or cultural experiences</li>
+                                        <li>Discontinuous with no overarching integrating principle</li>
+                                        <li>Tend to be oral, culturally embedded, and contextually based</li>
+                                        <li>Example: Sociology, indigenous knowledge systems</li>
+                                    </ul>
+                                </div>
+                                <!-- Vertical Knowledge -->
+                                <div class="vertical-knowledge">
+                                    <div class="knowledge-header">
+                                        <i class="fas fa-arrows-alt-v knowledge-icon vertical-icon"></i>
+                                        <h3>Vertical Knowledge</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Coherent, systematically principled knowledge</li>
+                                        <li>Integrated bodies of knowledge that build cumulatively</li>
+                                        <li>Organized through generalized rules and methodologies</li>
+                                        <li>Specialized and symbolic (e.g., physical sciences)</li>
+                                        <li>Hierarchical organization with explicit validation rules</li>
+                                        <li>Facilitates progression and conceptual understanding</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__meta">
+                                <span class="tag">Comparison</span>
+                                <span class="tag">Structures</span>
+                                <span class="tag">Analysis</span>
+                            </div>
+                        </div>
+                        <footer class="card__footer">
+                            Contrasting characteristics of knowledge structures
+                        </footer>
+                    </div>
                 </div>
-                <ul>
-                    <li>Segmented, context-specific knowledge domains</li>
-                    <li>Local knowledge often learned informally</li>
-                    <li>Rooted in specific social or cultural experiences</li>
-                    <li>Discontinuous with no overarching integrating principle</li>
-                    <li>Tend to be oral, culturally embedded, and contextually based</li>
-                    <li>Example: Sociology, indigenous knowledge systems</li>
-                </ul>
             </div>
-            <!-- Vertical Knowledge -->
-            <div class="vertical-knowledge">
-                <div class="knowledge-header">
-                    <i class="fas fa-arrows-alt-v knowledge-icon vertical-icon"></i>
-                    <h3>Vertical Knowledge</h3>
-                </div>
-                <ul>
-                    <li>Coherent, systematically principled knowledge</li>
-                    <li>Integrated bodies of knowledge that build cumulatively</li>
-                    <li>Organized through generalized rules and methodologies</li>
-                    <li>Specialized and symbolic (e.g., physical sciences)</li>
-                    <li>Hierarchical organization with explicit validation rules</li>
-                    <li>Facilitates progression and conceptual understanding</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card__meta">
-            <span class="tag">Comparison</span>
-            <span class="tag">Structures</span>
-            <span class="tag">Analysis</span>
-        </div>
-    </div>
-    <footer class="card__footer">
-        Contrasting characteristics of knowledge structures
-    </footer>
-</div>
+            <!-- Educational Implications Section -->
+            <div class="content-section">
+                <h2 class="section-title">Educational Implications</h2>
+                <div class="articles-container">
                     <!-- Card 3: Transition Challenges -->
                     <div class="card">
                         <div class="card__header">
@@ -1087,7 +1094,11 @@
                         </div>
                         <div class="card__body">
                             <img src="https://github.com/oeybers-cpu/knowledge_structure_theory/blob/main/frustrated%20ss.jpg?raw=true" alt="Frustrated student illustration" class="card__image">
-                            <p>South African students increasingly demonstrate remarkable resilience as they master academic literacy practices while maintaining connection to their cultural roots. This transition isn't about abandoning heritage but developing dual literacy—the ability to navigate both community knowledge systems and academic discourse with confidence and competence.</p>
+                            <p>The challenge for African students lies in transitioning from horizontal knowledge systems (their home and community knowledge) to the vertical knowledge structures dominant in higher education institutions.</p>
+                            <p>This transition entails mastering academic literacy practices—reading, writing, reasoning, and argumentation styles specific to disciplines—which are often unfamiliar and alienating.</p>
+                            <blockquote class="card__quote">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Students must navigate between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge.
+                            </blockquote>
                             <div class="card__meta">
                                 <span class="tag">Challenges</span>
                                 <span class="tag">Transition</span>
@@ -1107,7 +1118,8 @@
                         </div>
                         <div class="card__body">
                             <img src="https://www.scijournal.org/articles/wp-content/uploads/2022/09/image3-2-1536x864.png" alt="Academic support illustration" class="card__image">
-                            <p>Academic literacy developers in South Africa are pioneering innovative approaches that validate students' lived experiences while building disciplinary expertise. Through thoughtful pedagogy, they're transforming classrooms into spaces where African languages, cultural knowledge, and academic rigor coexist, creating sustainable pathways to educational equity.</p>
+                            <p>Academic literacy developers play a critical mediating role in bridging this gap. They facilitate students' navigation between their indigenous, culturally situated horizontal knowledge and the vertically structured academic knowledge demanded by universities.</p>
+                            <p>This involves making explicit the genres, conventions, and epistemological underpinnings of vertical knowledge structures while validating and incorporating students' cultural and linguistic backgrounds.</p>
                             <div class="card__meta">
                                 <span class="tag">Mediation</span>
                                 <span class="tag">Support</span>
@@ -1142,7 +1154,11 @@
                                 </div>
                                 <div class="digital-lines"></div>
                             </div>
-                            <p>South Africa's educational transformation is accelerating through African-centered approaches that integrate indigenous knowledge with academic disciplines. These inclusive models reduce attrition rates while empowering students to become scholars who carry their cultural intelligence into professional fields, driving sustainable development across communities.</p>
+                            <p>In African contexts, academic literacy development is most effective when it moves beyond neutral, standardized literacy models and adopts an African-centered, inclusive approach that integrates African languages, ways of knowing, and cultural epistemologies.</p>
+                            <p>This approach values students' identities, their situated knowledge, and the need to develop mastery in disciplinary genres. It can reduce high attrition rates and empower students to succeed academically while retaining their cultural intelligences and agency.</p>
+                            <blockquote class="card__quote">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i> Effective approaches integrate African languages, ways of knowing, and cultural epistemologies.
+                            </blockquote>
                             <div class="card__meta">
                                 <span class="tag">Inclusion</span>
                                 <span class="tag">Culture</span>
@@ -1162,7 +1178,14 @@
                         </div>
                         <div class="card__body">
                             <img src="https://github.com/oeybers-cpu/knowledge_structure_theory/blob/main/strategising.png?raw=true" alt="Education strategies illustration" class="card__image">
-                            <p>Educators across South Africa are implementing contextually relevant strategies: connecting disciplinary literacies with cultural knowledge, designing multilingual curricula, and creating spaces for dialogue that honor diverse epistemologies. These approaches are producing graduates equipped to solve complex problems through culturally grounded innovation.</p>
+                            <p>Academic literacy developers can implement various strategies to support African students:</p>
+                            <ul>
+                                <li>Contextualize academic literacy by linking disciplinary literacies with students' cultural knowledge</li>
+                                <li>Design inclusive curricula that recognize multiple epistemologies and languages</li>
+                                <li>Scaffold students' acquisition of academic genres and literacy practices</li>
+                                <li>Create opportunities for dialogue that validate African knowledge systems</li>
+                                <li>Promote critical literacies and transdisciplinary approaches</li>
+                            </ul>
                             <div class="card__meta">
                                 <span class="tag">Strategies</span>
                                 <span class="tag">Implementation</span>
@@ -1185,7 +1208,11 @@
                     </div>
                     <div class="card__body">
                         <img src="https://github.com/oeybers-cpu/knowledge_structure_theory/blob/main/bridge.png?raw=true" alt="Knowledge integration illustration" class="card__image">
-                        <p>The progress of formerly marginalized students in South Africa demonstrates that knowledge systems need not compete but can collaborate. Academic developers act as cultural brokers, creating educational environments where indigenous wisdom and academic rigor mutually enrich each other. This integration fosters sustainable, equitable education that prepares students to lead global innovation while remaining rooted in their communities.</p>
+                        <p>Understanding Bernstein's distinction helps academic literacy developers appreciate the epistemological and cultural challenges African students face. To support success, developers must act as cultural and epistemic brokers who translate and negotiate between the horizontal knowledge students embody and the vertical knowledge demanded by academic institutions.</p>
+                        <p>This involves designing inclusive, culturally responsive literacy practices that empower students to navigate and integrate these different knowledge structures effectively. By recognizing the value of both knowledge systems, we can create more equitable educational environments that honor diverse ways of knowing while preparing students for academic success.</p>
+                        <blockquote class="card__quote">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i> Developers must act as cultural and epistemic brokers who translate between knowledge systems.
+                        </blockquote>
                         <div class="card__meta">
                             <span class="tag">Integration</span>
                             <span class="tag">Brokerage</span>
